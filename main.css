@@ -1,0 +1,38 @@
+
+
+.container {
+    width: 500px;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 2px;
+
+    background-color: #eeeeee;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+img {
+    min-width: 100px;
+    max-width: 100px;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+h2, h3 {
+    margin: 0px;
+}
