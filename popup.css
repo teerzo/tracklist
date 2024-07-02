@@ -1,0 +1,29 @@
+
+
+.container {
+    width: 300px;
+    /* border: 1px solid #333333; */
+    /* border-radius: 5px; */
+    /* padding: 5px; */
+
+}
+
+.inner {
+    padding: 5px;
+    background-color: #eeeeee;
+}
+
+h1,h2,h3 {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    padding: 5px 10px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
