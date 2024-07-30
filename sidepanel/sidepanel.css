@@ -1,0 +1,281 @@
+html,
+body {
+    margin: 0px;
+    background: rgba(0, 0, 0, 0);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    background-color: #eeeeee;
+    overflow: hidden;
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        flex-grow: 1;
+        padding: 5px;
+        gap: 5px;
+    }
+    .player {
+        padding: 5px;
+        /* background-color: #00ff00; */
+        /* border: 1px solid #333333; */
+        /* border-radius: 10px 10px 0px 0px; */
+
+        .player-inner {
+            border: 1px solid #aaaaaa;
+            border-radius: 10px 10px 0px 0px;
+            padding: 5px;
+        }
+    }
+    .source {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* margin-top: 10px; */
+        width: 200px;
+        margin: 0px auto;
+        height: 35px;
+        img,
+        svg {
+            width: 100%;
+            height: auto;
+        }
+        .source-loading {
+            width: 100%;
+            height: 40px;
+        }
+        .source-bandcamp {
+            width: 100%;
+        }
+        .source-soundcloud {
+            width: 100%;
+            margin-bottom: 5px;
+            background: #f50;
+            background: linear-gradient(#f70, #f30);
+            .sc-inner {
+                padding: 5px;
+            }
+        }
+    }
+    .art {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        /* margin-top: 10px; */
+
+        img {
+            min-width: 200px;
+            max-width: 200px;
+            min-height: 200px;
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid #dddddd;
+            background-color: #fefefe;
+        }
+    }
+    .time {
+        display: flex;
+        flex-direction: row;
+        /* background-color: #ff0000; */
+        padding: 10px;
+        gap: 10px;
+
+        input {
+            width: 100%;
+        }
+        .elapsed {
+            font-size: 16px;
+        }
+        .total {
+            font-size: 16px;
+        }
+    }
+    .controls {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 200px;
+        margin: 0 auto;
+
+        svg {
+            color: #333333;
+            width: 30px;
+            height: 30px;
+        }
+        .previous {
+        }
+        .play {
+            display: block;
+        }
+        .pause {
+            display: block;
+        }
+        .next {
+        }
+
+        .hide {
+            display: none;
+        }
+    }
+    .details {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 5px;
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+        .artist {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+            gap: 10px;
+        }
+        .album {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+            gap: 10px;
+        }
+        .track {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+    .tracklist {
+        display: flex;
+        flex-direction: column;
+        /* margin-top: 5px; */
+        padding: 5px;
+        /* background-color: #00ff00; */
+        /* border: 1px solid #333333; */
+        /* border-radius: 0px 0px 10px 10px; */
+        flex-grow: 1;
+        overflow-y: auto;
+
+        .tab-buttons {
+            display: flex;
+            flex-direction: row;
+            /* gap: 5px; */
+
+            .tab-button {
+                font-size: 16px;
+                padding: 10px;
+
+                background-color: #dddddd;
+                /* border: 1px solid #cccccc; */
+                border-radius: 5px 5px 0px 0px;
+                border: 1px solid #cccccc;
+                border-width: 1px 1px 0px 1px;
+            }
+            .tab-button.active {
+                z-index: 2;
+                margin-bottom: -1px;
+
+                background-color: #eeeeee;
+
+                border-radius: 5px 5px 0px 0px;
+                border: 1px solid #aaaaaa;
+                border-width: 1px 1px 0px 1px;
+            }
+        }
+
+        .tabs {
+            flex-grow: 1;
+            padding-bottom: 50px;
+            border: 1px solid #aaaaaa;
+            border-radius: 0px 0px 10px 10px;
+
+            .tab-items {
+                .tab-row {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-size: 16px;
+                    gap: 2px;
+                    padding: 5px;
+                    /* border-top: 1px solid #aaaaaa; */
+                    /* border: 1px solid red; */
+                }
+                .tab-row:nth-child(even) {
+                    background-color: #e3e3e3;
+                }
+                .tab-row.active {
+                    background-color: #96da96;
+                    font-weight: bold;
+                }
+                .tab-row-center {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 18px;
+                    padding-top: 20px;
+                    height: 100%;
+                    /* border: 1px solid green; */
+                    /* background-color: #ff0000; */
+                }
+                .index {
+                    min-width: 25px;
+                    /* background-color: #aaaaaa; */
+                }
+                .tab-details {
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
+                }
+                .track {
+                    flex-grow: 1;
+                }
+
+                .total {
+                    /* min-width: 30px; */
+                    /* background-color: #aaaaaa; */
+                }
+            }
+        }
+
+       
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0px;
+}
+
+.hide {
+    display: none !important;
+}

@@ -2,15 +2,39 @@
 
 <head>
     <title>Tracklist - Popup </title>
-    <link rel="stylesheet" type="text/css" href="popup.css">
+    <link rel="stylesheet" type="text/css" href="styles/popup.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="inner">
-            <h1> Tracklist - Popup </h1>
-            <a href="" id="popupLink" target="_blank"> <button class="button"> Open Popup </button> </a>
+    <div class="popup-wrapper">
+        <div class="popup-title"> 
+            <h1> Tracklist </h1>
+            <div class="grow"> </div>
+            <a href="" id="popupLink" target="_blank"> Open </a>
+            <button id="sidepanelButton"> Side panel </button>
         </div>
+
+
+        <div class="container">
+            <div class="loading"> </div>
+
+            <div class="row">
+                <div>
+                    <img id="image" />
+                </div>
+                <div class="col">
+                    <p id="currentArtist"> <span id="artist"> - <span id="album"></span>  </span> </p>
+                    <p id="currentTitle"> <span id="song"> </span> </p>
+                    <p id="currentSource"> <span id="source"> </span> </p>
+
+                    <div class="grow"> </div>
+                    <!-- <a href="" id="url" target="_blank"> </a> -->
+                </div>
+            </div>
+        </div>
+
+        
+
     </div>
     <script src="popup.js"></script>
 </body>

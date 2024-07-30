@@ -5,15 +5,42 @@
     "manifest_version": 3,
     "permissions": [
         "tabs",
-        "scripting"
+        "scripting",
+        "sidePanel"
     ],
     "background": {
-        "service_worker": "serviceWorker.js"
+        "service_worker": "scripts/serviceWorker.js"
+    },
+    "side_panel": {
+        "default_path": "sidepanel/sidepanel.html"
     },
     "content_scripts": [
         {
-            "matches": ["https://soundcloud.com/*"],
-            "js": [ "content-scripts.js" ],
+            "matches": [
+                "https://soundcloud.com/*",
+                "https://soundcloud.com/you/likes/*"
+            ],
+            "js": [
+                "scripts/soundcloud.js"
+            ],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": [
+                "https://*.bandcamp.com/*"
+            ],
+            "js": [
+                "scripts/bandcamp.js"
+            ],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": [
+                "https://youtube.com/*"
+            ],
+            "js": [
+                "scripts/youtube.js"
+            ],
             "run_at": "document_idle"
         }
     ],

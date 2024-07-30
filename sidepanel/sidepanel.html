@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tracklist - Sidepanel </title>
+    <link rel="stylesheet" type="text/css" href="./sidepanel.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner">
+            <div class="player">
+                <div class="player-inner">
+
+
+                    <div class="source">
+                        <div id="div-src-loading" class="source-loading">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>
+                        </div>
+                        <div id="div-src-bandcamp" class="source-bandcamp">
+                            <img src="../images/bandcamp-logo.png" />
+                        </div>
+                        <div id="div-src-soundcloud" class="source-soundcloud">
+                            <div class="sc-inner">
+                                <img src="../images/sc-logo.svg" />
+                            </div>
+                        </div>
+                        <!-- <p> <span id="source"> ... </span> </p> -->
+                    </div>
+                    <div class="art">
+                        <img id="image" />
+                    </div>
+                    <div class="time">
+                        <div id="div-elapsed" class="elapsed"> 00:00 </div>
+                        <input id="input-time" type="range" min="0" max="100" value="69" disabled readonly />
+                        <div id="div-total" class="total"> 00:00 </div>
+                    </div>
+                    <div class="controls">
+                        <div id="btn-previous" class="previous">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061a1.125 1.125 0 0 1 1.683.977v8.122Z" />
+                            </svg>
+                        </div>
+                        <div id="btn-play" class="play">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                            </svg>
+                        </div>
+                        <div id="btn-pause" class="pause hide">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
+                            </svg>
+                        </div>
+                        <div id="btn-next" class="next">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z" />
+                            </svg>
+
+                        </div>
+                    </div>
+
+
+                    <div class="details">
+                        <div class="artist">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                            </svg>
+                            <h2> <span id="artist"> ... </span> </h2>
+                        </div>
+                        <div id="div-album" class="album">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+                            </svg>
+
+                            <h2> <span id="album"> ... </span> </h2>
+                        </div>
+
+                        <div class="track">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m9 9 10.5-3m0 6.553v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 1 1-.99-3.467l2.31-.66a2.25 2.25 0 0 0 1.632-2.163Zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 0 1-1.632 2.163l-1.32.377a1.803 1.803 0 0 1-.99-3.467l2.31-.66A2.25 2.25 0 0 0 9 15.553Z" />
+                            </svg>
+                            <h2> <span id="track"> ... </span> </h2>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tracklist">
+                <!-- <h3> Tracklist </h3> -->
+
+                <div class="tab-buttons">
+                    <div id="tab-button-tracklist" class="tab-button active"> Tracklist </div>
+                    <div id="tab-button-queue" class="tab-button"> Queue </div>
+                    <div id="tab-button-lyrics" class="tab-button"> Lyrics </div>
+                </div>
+
+                <div class="tabs">
+                    <div id="tab-tracklist" class="tab">
+                        <div id="tab-items-tracklist" class="tab-items">
+                            <div class="tab-row-center"> No tracklist available </div>
+                        </div>
+                    </div>
+                    <div id="tab-queue" class="tab hide">
+                        <div id="tab-items-queue" class="tab-items">
+                            <div class="tab-row-center"> No items in queue </div>
+                        </div>
+                    </div>
+                    <div id="tab-lyrics" class="tab hide">
+                        <div id="tab-items-lyrics" class="tab-items">
+                            <div class="tab-row-center"> No lyrics available </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+        <!-- <div class="loading"> </div> -->
+
+        <!-- <div class="row">
+            <div>
+
+            </div>
+            <div class="col">
+
+
+
+                <div class="grow"> </div>
+                <a href="" id="url" target="_blank"> </a>
+            </div>
+        </div> -->
+    </div>
+    <script src="./sidepanel.js"></script>
+</body>
+
+</html>
